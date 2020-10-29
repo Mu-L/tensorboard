@@ -12,6 +12,7 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 ==============================================================================*/
+import {OverlayModule} from '@angular/cdk/overlay';
 import {CommonModule} from '@angular/common';
 import {NgModule} from '@angular/core';
 
@@ -20,18 +21,20 @@ import {
   LineChartYAxisComponent,
 } from './line_chart_axis_view';
 import {LineChartGridView} from './line_chart_grid_view';
+import {LineChartInteractiveViewComponent} from './line_chart_interactive_view';
 
 @NgModule({
   declarations: [
     LineChartXAxisComponent,
     LineChartYAxisComponent,
     LineChartGridView,
+    LineChartInteractiveViewComponent,
   ],
   exports: [
     LineChartXAxisComponent,
     LineChartYAxisComponent,
     LineChartGridView,
   ],
-  imports: [CommonModule],
+  imports: [CommonModule, OverlayModule],
 })
 export class SubViewModule {}
