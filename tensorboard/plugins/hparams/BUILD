@@ -1,12 +1,12 @@
 # Description:
 # TensorBoard plugin for hparams
 
-load("//tensorboard/defs:defs.bzl", "tf_ts_library")
-load("//tensorboard/defs:web.bzl", "tf_web_library")
-load("//tensorboard/defs:protos.bzl", "tb_proto_library")
 load("@rules_python//python:py_binary.bzl", "py_binary")
 load("@rules_python//python:py_library.bzl", "py_library")
 load("@rules_python//python:py_test.bzl", "py_test")
+load("//tensorboard/defs:defs.bzl", "tf_ts_library")
+load("//tensorboard/defs:protos.bzl", "tb_proto_library")
+load("//tensorboard/defs:web.bzl", "tf_web_library")
 
 package(default_visibility = ["//tensorboard:internal"])
 
@@ -49,7 +49,7 @@ py_library(
         "//tensorboard/plugins/scalar:scalars_plugin",
         "//tensorboard/util:tb_logging",
         "//tensorboard/util:tensor_util",
-        "@org_pocoo_werkzeug",
+        "@tensorboard_pip_deps//werkzeug",
     ],
 )
 
